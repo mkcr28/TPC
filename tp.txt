@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void) {
+    char prenom[50];
+    int a = 0;
+    int b = 0;
+
+    printf("Quel est votre prenom ? ");
+    if (scanf("%49s", prenom) != 1) {
+        return 1;
+    }
+
+    printf("Entrez deux entiers : ");
+    if (scanf("%d %d", &a, &b) != 2) {
+        return 1;
+    }
+
+    printf("Bonjour %s, la somme de %d et %d vaut %d.\n", prenom, a, b, a + b);
+    return 0;
+}
